@@ -1,5 +1,4 @@
 <template>
-
     <NuxtLayout name="manual">
         <template #header>
             <div>

@@ -1,18 +1,43 @@
 <template>
-  <NuxtLayout>
-    <h1>Demo01</h1>
-    <div class="text-red-300" @click="changeCustomLayout">changeLayout</div>
-  </NuxtLayout>
+
+  <h1>Demo01</h1>
+  <button class="text-red-300" @click="update">changeLUpdate layoutayout</button>
+<div class="box">
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+</div>
+
 </template>
 <script lang="ts" setup>
-definePageMeta({
-  layout: "other",
-});
+
 
 const route = useRoute()
-const changeCustomLayout = () => {
+function update() {
   console.log('changeLayout');
-
-  route.meta.layout = "custom"
+  route.meta.layout = "other"
 }
+definePageMeta({
+  layout: false,
+});
 </script>
+
+<style>
+.box{
+display: flex;
+flex-wrap: wrap;
+width: 160px;
+margin:20px;
+}
+.child{
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+}
+</style>
