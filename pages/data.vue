@@ -3,16 +3,9 @@
 
     </div>
 </template>
-<script setup lang="ts">
-interface SwiperItemType {
-    id: number;
-    imgSrc: string;
-    alt: string
-}
+<script setup lang="ts">import { ResultType, SwiperItemType } from './types';
 
-interface ResultType<T> {
-    body: T;
-}
+
 const swiperData = useState<SwiperItemType[]>('swiperData', () => [])
 const getSwiperData = async () => {
     const { data } = await useAsyncData('swiperData', () => $fetch<ResultType<SwiperItemType[]>>('http://127.0.0.1:8009/home/swiper'))
@@ -21,6 +14,8 @@ const getSwiperData = async () => {
 }
 
 getSwiperData()
+
+
 </script>
 <style lang="less" scoped>
 </style>
