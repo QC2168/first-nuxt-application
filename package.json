@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --port=5678",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "nuxi": "3.0.0-rc.3",
+    "swiper": "^8.1.4",
     "typecheck": "^0.1.2"
   }
 }

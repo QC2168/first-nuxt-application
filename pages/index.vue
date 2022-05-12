@@ -6,10 +6,24 @@
     </NuxtLayout>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
+const route =useRoute()
 definePageMeta({
   title: 'My home page'
 })
-const route = useRoute()
-console.log(route);
+
+useHead({
+  titleTemplate: 'My App - %s',
+  // or, instead:
+  // titleTemplate: (title) => `My App - ${title}`,
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  charset: 'utf-8',
+  title:route.meta.title,
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ],
+  bodyAttrs: {
+    class: 'test'
+  }
+})
 </script>
