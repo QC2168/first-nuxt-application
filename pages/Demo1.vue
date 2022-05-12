@@ -1,7 +1,8 @@
 <template>
 
+<div>
   <h1>Demo01</h1>
-  <button class="text-red-300" @click="update">changeLUpdate layoutayout</button>
+  <button class="text-red-300" @click="update">changeLUpdate layout</button>
 <div class="box">
   <div class="child"></div>
   <div class="child"></div>
@@ -12,6 +13,7 @@
   <div class="child"></div>
   <div class="child"></div>
   <div class="child"></div>
+</div>
 </div>
 
 </template>
